@@ -20,7 +20,7 @@ public class Interactable : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(isInsideZone && Input.GetKeyDown(KeyCode.I))
+        if(isInsideZone && Input.GetKeyDown(KeyCode.Q))
         {
             Interact();
         }

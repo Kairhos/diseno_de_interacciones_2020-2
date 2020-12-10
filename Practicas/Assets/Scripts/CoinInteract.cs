@@ -27,7 +27,7 @@ public class CoinInteract : MonoBehaviour {
     }
 
     private void FixedUpdate() {
-        if(isInsideZone && Input.GetKeyDown(KeyCode.I))
+        if(isInsideZone && Input.GetKeyDown(KeyCode.Q))
             rb.AddTorque(transform.up * torque * -1f);
     }
 
