@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityStandardAssets.CrossPlatformInput;
 
 public class InventoryUI : MonoBehaviour
 {
@@ -20,7 +21,10 @@ public class InventoryUI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.I)){
+        //Para PC
+        //if(Input.GetKeyDown(KeyCode.I)){
+        //Para andriod
+        if(CrossPlatformInputManager.GetButtonDown("Inventory")){
             inventoryUIPanel.SetActive(!inventoryUIPanel.activeSelf);
             UpdateUI();
         }

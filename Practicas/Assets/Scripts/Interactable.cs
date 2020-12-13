@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityStandardAssets.CrossPlatformInput;
 
 public class Interactable : MonoBehaviour
 {
@@ -16,11 +17,21 @@ public class Interactable : MonoBehaviour
     {
         
     }
-
+/*
+    //Para metodos de entrada de pc
     // Update is called once per frame
     void Update()
     {
         if(isInsideZone && Input.GetKeyDown(KeyCode.Q))
+        {
+            Interact();
+        }
+    } 
+*/
+    //Para metodos de entrada de android
+    void Update()
+    {
+        if(isInsideZone && CrossPlatformInputManager.GetButtonDown("Interact"))
         {
             Interact();
         }
